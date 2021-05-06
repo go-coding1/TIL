@@ -14,7 +14,8 @@
 
 # SpringTriangle(3요소)
 
-사진
+![스프링 삼각형](https://user-images.githubusercontent.com/54675591/117247962-254d5400-ae7a-11eb-9389-0f4fee0b5b93.png)
+
 
 Spring개발자한테 Spring Triangle 물어봤을 때 대답 못하면 진짜 혼나야한다. 그 만큼 기본중에 기본이다. 3대 요소를 설명하기에 앞서 POJO먼저 이해해야한다. 
 
