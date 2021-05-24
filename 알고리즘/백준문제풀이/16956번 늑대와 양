@@ -1,0 +1,103 @@
+## 문제
+
+크기가 R×C인 목장이 있고, 목장은 1×1 크기의 칸으로 나누어져 있다. 각각의 칸에는 비어있거나, 양 또는 늑대가 있다. 양은 이동하지 않고 위치를 지키고 있고, 늑대는 인접한 칸을 자유롭게 이동할 수 있다. 두 칸이 인접하다는 것은 두 칸이 변을 공유하는 경우이다.
+
+목장에 울타리를 설치해 늑대가 양이 있는 칸으로 갈 수 없게 하려고 한다. 늑대는 울타리가 있는 칸으로는 이동할 수 없다. 울타리를 설치해보자.
+
+## 입력
+
+첫째 줄에 목장의 크기 R, C가 주어진다.
+
+둘째 줄부터 R개의 줄에 목장의 상태가 주어진다. '`.`'는 빈 칸, '`S`'는 양, '`W`'는 늑대이다.
+
+## 출력
+
+늑대가 양이 있는 칸으로 갈 수 없게 할 수 있다면 첫째 줄에 1을 출력하고, 둘째 줄부터 R개의 줄에 목장의 상태를 출력한다. 울타리는 '`D`'로 출력한다. 울타리를 어떻게 설치해도 늑대가 양이 있는 칸으로 갈 수 있다면 첫째 줄에 0을 출력한다.
+
+[예제 출력 링크](https://www.acmicpc.net/problem/16956)
+
+---
+
+## 정답
+
+처음에 늑대가 탐색을 해야하나 양이 너비탐색을 해야하나 생각했다. 그리고 울타리도 어떻게 세울지 고민했었다. 근데 생각해보니까 이 문제에서 중요한점은 **늑대가 양한테 도달할수 있나?** 였다. 생각의 순서는
+
+1. 늑대랑 양이랑 한칸 떨어져 있으면 울타리로 감싸면 됨
+2. 울타리 갯수 제한 없음
+3. 늑대랑 양이랑 바로 옆만 아니면 양은 무조건 지킬 수 있음
+
+라는 생각을 하고 나니 그냥 늑대 주변에 울타리만 감싸주면 되는 쉬운 문제였다. (_물론 울타리를 효율적으로 감싸는 방법도 생각해야겠지_)  
+
+```java
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.util.StringTokenizer;
+
+public class Main {
+	private static int r,c;
+	private static char[][] graph;
+	
+	private static int[] dx = {0,0,1,-1};
+	private static int[] dy = {1,-1,0,0};
+	public static void main(String[] args) throws IOException {
+		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+		StringTokenizer st = new StringTokenizer(br.readLine());
+		r = Integer.parseInt(st.nextToken());
+		c = Integer.parseInt(st.nextToken());
+		
+		graph = new char[r][c];
+		boolean flag = true;
+		
+		for(int i=0;i<r;i++) {
+			String str = br.readLine();
+			for(int j=0;j<c;j++) {
+				graph[i][j] = str.charAt(j);
+			}
+		}
+		
+		//늑대 주위에 울타리
+		//늑대 옆에 양 바로 있으면 무조건 0 출력
+		for(int i=0;i<r;i++) {
+			for(int j=0;j<c;j++) {
+				if(graph[i][j] == 'W') {
+					for(int xy = 0 ; xy<4; xy++) {
+						int nx = i+dx[xy];
+						int ny = j+dy[xy];
+						
+						//목장 안에 있을때
+						if(nx >=0 && nx< r && ny >=0 && ny<c) {
+							if(graph[nx][ny]=='.') {
+								graph[nx][ny]='D';
+							}else if(graph[nx][ny]=='S') {
+								flag = false;
+								System.out.println(0);
+								return;
+							}
+						}
+					}
+				}
+			}
+		}
+		
+		if(!flag) {
+			System.out.println(0);
+		}else {
+			StringBuilder sb = new StringBuilder();
+			System.out.println(1);
+			for(int i=0;i<r;i++) { 
+				sb.append(graph[i]);
+				sb.append("\n");
+			}
+			System.out.println(sb);
+		}
+		
+		
+	}
+}
+
+
+
+
+```
+
