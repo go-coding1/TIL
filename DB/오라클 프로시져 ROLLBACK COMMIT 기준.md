@@ -114,7 +114,7 @@ END P_TEMP_FORLOOP_TEST;
 
 실행 결과창에서는 아까와 똑같은 결과가 나왔다. 그럼 이제 실제 조회를 해보자.
 
-![image-20210626114219803](C:\Users\USER\AppData\Roaming\Typora\typora-user-images\image-20210626114219803.png)
+![image](https://user-images.githubusercontent.com/54675591/123499814-3cd3dc80-d674-11eb-8044-0100bd1c581b.png)
 
 아까와 달라졌다!! ROLLBACK되었지만 TEMP_NO가 10, 20, 30 인 행의 MOD_DATE 값은 UPDATE되었다.
 
