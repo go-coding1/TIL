@@ -88,3 +88,7 @@ public Order cancelOrder(int orderId){
 ```
 
 Order, billing, delivery가 각자 본인의 취소 이벤트 처리를 하며(이 말은 도메인 개체가 서비스 처리(취소행위)를 담당), 서비스 메소드는 **트랜잭션과 도메인 간의 순서만 보장** 해 줍니다.
+
+---
+글 출처 : 스프링부트와 AWS로 혼자 구현하는 웹 
+
