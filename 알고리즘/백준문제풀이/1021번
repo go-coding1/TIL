@@ -1,0 +1,59 @@
+[1021번 회전하는 ](https://www.acmicpc.net/problem/1021)
+
+```java
+import java.io.BufferedReader;
+import java.io.BufferedWriter;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.io.OutputStreamWriter;
+import java.util.Deque;
+import java.util.LinkedList;
+import java.util.Queue;
+
+public class Main {
+	static int[] N;
+	public static void main(String[] args) throws IOException{
+		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+		BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
+		
+		String [] NM = br.readLine().split(" ");
+		
+		String [] index = br.readLine().split(" ");
+		
+		//원형 순환 큐를 위한 덱 생성
+		Deque<Integer> deque = new LinkedList<Integer>();
+		//처음 큐 생성
+		int j=0;	//index 배열의 인덱스
+		for(int i=1 ; i <= Integer.parseInt(NM[0]) ; i++) {	
+				deque.add(i);
+		}
+		//숫자를 잠시 담을 스택2개 생성
+		//s1은 2번 왼쪽으로 돌때 담을 스택 
+		Queue<Integer> q = new LinkedList<Integer>();
+		int sum=0;
+		for(int i=0;i<index.length;i++) {
+			while(deque.peekFirst() != Integer.parseInt(index[i])) {
+				q.offer(deque.poll());
+			}
+			if(q.size()<deque.size()) {//왼쪽으로 옮기는게 더 적은 연산일때
+				sum+=q.size();
+			}else {
+				sum+= deque.size();
+			}
+			deque.poll();
+			while(!q.isEmpty()) {
+					deque.addLast(q.poll());
+			}
+		}
+		System.out.println(sum);
+		
+		
+		br.close();
+		bw.flush();
+		bw.close();
+	}
+	
+	
+}
+
+```
