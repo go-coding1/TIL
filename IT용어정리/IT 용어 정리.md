@@ -18,6 +18,12 @@ VPC를 만들었다면 이제 서브넷을 만들 수 있습니다. 서브넷은
 
 
 
+### 슬라이딩 윈도우 알고리즘
+
+ 슬라이딩 윈도우 알고리즘은 배열이나 리스트의 요소의 일정 범위의 값을 비교할때 사용하면 유용한 알고리즘이다. [설명](https://blog.fakecoding.com/archives/algorithm-slidingwindow/)
+
+
+
 ### 정형(Structured), 반정형(Semi-Structrued), 비정형(Unstructured)
 
 * 정형 데이터
