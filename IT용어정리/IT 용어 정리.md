@@ -278,17 +278,23 @@ kubeadm이란, kubernetes에서 제공하는 기본적인 도구이며, kubernet
 
 
 
-### Orchestration(오케스트레이션)
-
-오케스트레이션은 컴퓨터 시스템과 애플리케이션, 서비스의 자동화된 설정, 관리, 조정을 의미함
-
-
-
 ### OCI(Open Container Initiative)
 
 컨테이너 기술에 대한 표준화.
 
  OCI는 컨테이너 런타임과 이미지 관련 업계 개방형 표준을 만들기 위해 2015년 6월22일 레드햇과 Docker사 등의 여러 기업에 의해 설립된 현재는 Linux Foundation 산하의 오픈 소스 단체입니다.
+
+
+
+### OOP(Object-Oriented Programming)
+
+객체 지향 프로그래밍
+
+
+
+### Orchestration(오케스트레이션)
+
+오케스트레이션은 컴퓨터 시스템과 애플리케이션, 서비스의 자동화된 설정, 관리, 조정을 의미함
 
 
 
