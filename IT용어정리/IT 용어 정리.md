@@ -30,6 +30,16 @@ VPC를 만들었다면 이제 서브넷을 만들 수 있습니다. 서브넷은
 
 
 
+### 인바운드(Inbound)
+
+외부에서 내부로 접속하는 것
+
+### 아웃바운드(Outbound)
+
+내부에서 외부로 접속하는 것
+
+
+
 ### 정형(Structured), 반정형(Semi-Structrued), 비정형(Unstructured)
 
 * 정형 데이터
@@ -400,6 +410,10 @@ MSA에서 Monolitic 어플리케이션을 여러개의 서비스로 나누다 �
 Eureka에 등록된 서비스들에 대해서 어떻게 접근하고 사용하는지 그 방법인 **Spring Cloud Netflix Zuul**을 이용해 API Gateway를 구성할 수 있다. API Gateway는 Service Routing 기능과 고가용성을 적용할 수 있으며 가볍게 설계된 디자인 패턴이다.
 
 ![image](https://user-images.githubusercontent.com/54675591/127960979-0d25942f-dcd9-42d5-884c-8f69924e3ff2.png)
+
+### TCPDUMP
+
+tcpdump는 대부분의 유닉스 계열에서 네트워크카드를 통해 송수신 되는 패킷을 가로채고 표시해주는 소프트웨어 입니다. 참고로 유닉스 계열에서 TcpDump가 있다면 윈도우 계열에서는 WinDump라는 것이 있습니다. IT에 종사하시는 분들이시라면 tcpdump라는 명령어를 보거나 들어는 보셨을 것입니다.
 
 
 
