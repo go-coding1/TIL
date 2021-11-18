@@ -513,6 +513,10 @@ Eureka에 등록된 서비스들에 대해서 어떻게 접근하고 사용하�
 
 ![image](https://user-images.githubusercontent.com/54675591/127960979-0d25942f-dcd9-42d5-884c-8f69924e3ff2.png)
 
+### Sysbench
+
+sysbench는 DB 서버에 자주 사용하는 스크립트 멀티 쓰레드 벤치마크 툴이다. 주로 MySQL(MariaDB), PostgreSQL 벤치마크에 사용된다.
+
 ### TCPDUMP
 
 tcpdump는 대부분의 유닉스 계열에서 네트워크카드를 통해 송수신 되는 패킷을 가로채고 표시해주는 소프트웨어 입니다. 참고로 유닉스 계열에서 TcpDump가 있다면 윈도우 계열에서는 WinDump라는 것이 있습니다. IT에 종사하시는 분들이시라면 tcpdump라는 명령어를 보거나 들어는 보셨을 것입니다.
