@@ -447,7 +447,9 @@ kubeadm이란, kubernetes에서 제공하는 기본적인 도구이며, kubernet
 
 역할 기반 접근 제어(role-based access control, RBAC)는 컴퓨터 시스템 보안에서 권한이 있는 사용자들에게 시스템 접근을 통제하는 한 방법이다. 500명 이상의 직원이 있는 기업 다수가 사용하며 강제 접근 제어(MAC)나 임의 접근 제어(DAC)를 구현할 수 있다. RBAC는 역할 기반 보안으로 부르기도 한다.
 
+### Rest Repository(Spring Data Rest)
 
+스프링부트에서 REST API 생성 시 구조는 Controller -> Service -> Repository 이다. 의존성에 Spring Data Rest를 추가해주면 Controller, Service 구성없이 Repository(Persistence Layer) 구성만으로 REST API를 쉽게 생성할 수 있다. 그뿐 아니라 기존에 REST API 구성 시 필요했던 (메타데이터 제공, 페이징 및 정렬 처리, 전처리 후처리 작업 등) 기능을 제공하고 있습니다. [공식문서](https://spring.io/projects/spring-data-rest)
 
 ### RMI(Remote Method Invocation)
 
