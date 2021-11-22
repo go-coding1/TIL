@@ -581,6 +581,10 @@ Eureka에 등록된 서비스들에 대해서 어떻게 접근하고 사용하�
 
 ![image](https://user-images.githubusercontent.com/54675591/127960979-0d25942f-dcd9-42d5-884c-8f69924e3ff2.png)
 
+### SSH
+
+Secure Shell(이하 SSH)는 네트워크 상의 다른 컴퓨터에 로그인하거나 원격 시스템에서 명령을 실행하고 다른 시스템으로 파일을 복사할 수 있도록 해 주는 응용 프로그램 또는 그 프로토콜을 가리킨다.
+
 ### Sticky Session
 
  한 서버 인스턴스(WAS)에만 붙어있는 세션이라고 생각하면 된다.
