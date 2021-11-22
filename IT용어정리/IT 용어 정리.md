@@ -581,6 +581,12 @@ Eureka에 등록된 서비스들에 대해서 어떻게 접근하고 사용하�
 
 ![image](https://user-images.githubusercontent.com/54675591/127960979-0d25942f-dcd9-42d5-884c-8f69924e3ff2.png)
 
+### Sticky Session
+
+ 한 서버 인스턴스(WAS)에만 붙어있는 세션이라고 생각하면 된다.
+
+ 문제는 Load Balancer를 이용해 다중 서버를 이용하면 각 서버당 세션값이 달라져서 문제가 발생한다. 이를 해결하기 위한것으로 Redis가 있다.
+
 ### Sysbench
 
 sysbench는 DB 서버에 자주 사용하는 스크립트 멀티 쓰레드 벤치마크 툴이다. 주로 MySQL(MariaDB), PostgreSQL 벤치마크에 사용된다.
