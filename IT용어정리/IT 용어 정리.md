@@ -408,6 +408,14 @@ JAR은 Java Archive의 약자로 자바에서 사용되는 압축 파일의 한 
 
 저널(Journal)은 트랜잭션이나 매일 갱신되는 데이터의 변경 이력을 가리킨다. 저널을 남겨 두는 것을 저널링(Journaling)이라고 한다.
 
+### Ktor
+
+JetBrains에서 개발된 프레임워크로써 멀티 플랫폼에 대한 지원을 목적으로 개발되었습니다. Ktor를 사용하면 코루틴 기반의 비동기 서버와 HTTP클라이언트 모두 개발이 가능합니다.
+
+경량 서버 개발을 위한 프레임워크 - 필요한 기능은 프레임워크와 라이브러리를 사용해 구성
+
+비동기 프로그래밍 모델을 제공 - Kotlin coroutine
+
 ### kubeadm
 
 kubeadm이란, kubernetes에서 제공하는 기본적인 도구이며, kubernetes 클러스터를 가장 발리 구축하기 위한 다양한 기능을 제공한다.
@@ -582,6 +590,16 @@ MSA에서 Monolitic 어플리케이션을 여러개의 서비스로 나누다 �
 Eureka에 등록된 서비스들에 대해서 어떻게 접근하고 사용하는지 그 방법인 **Spring Cloud Netflix Zuul**을 이용해 API Gateway를 구성할 수 있다. API Gateway는 Service Routing 기능과 고가용성을 적용할 수 있으며 가볍게 설계된 디자인 패턴이다.
 
 ![image](https://user-images.githubusercontent.com/54675591/127960979-0d25942f-dcd9-42d5-884c-8f69924e3ff2.png)
+
+### SSH
+
+Secure Shell(이하 SSH)는 네트워크 상의 다른 컴퓨터에 로그인하거나 원격 시스템에서 명령을 실행하고 다른 시스템으로 파일을 복사할 수 있도록 해 주는 응용 프로그램 또는 그 프로토콜을 가리킨다.
+
+### Sticky Session
+
+ 한 서버 인스턴스(WAS)에만 붙어있는 세션이라고 생각하면 된다.
+
+ 문제는 Load Balancer를 이용해 다중 서버를 이용하면 각 서버당 세션값이 달라져서 문제가 발생한다. 이를 해결하기 위한것으로 Redis가 있다.
 
 ### Sysbench
 
